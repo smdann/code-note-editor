@@ -7,7 +7,7 @@
 
 ## Description
 
-
+The Code Note Editor, also known as 'Just Another Text Editor', is a progressive web application. The user can take code notes in the text editor with or without an internet connection. This application functions in the browser and it may also be downloaded to the user's desktop.
 
 ## Table of Contents
 
@@ -20,15 +20,19 @@
 
 ## Installation 
 
+Installation is not required as this application has been deployed to Heroku. To see it in action, please visit the link below.
 
+To install locally, clone the code in this repository and run `npm install` to install the required packages. Next, run `npm run start` from the root directory to start the backend and serve the client. Once complete, the application will run on localhost:3000. 
 
 ## Usage 
 
+The Code Note Editor is easy to use and convenient due to it being a progressive web application. It can be used in the browser or installed by clicking the install button on the home screen. Installing will download the application to the user's desktop and an icon will appear.
 
+It can be used with or without an internet connection by utilizing data persistance techniques. Data is stored to an IndexedDB database. If the application is closed and then reopened, content that was previously entered will be retrieved from IndexedDB.  
 
 [Deployed Application]()
 
-![Screenshot]()
+![Screenshot](./client/src/images/screenshot.png)
 
 ## License 
 
