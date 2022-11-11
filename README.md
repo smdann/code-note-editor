@@ -30,7 +30,7 @@ The Code Note Editor is easy to use and convenient due to it being a progressive
 
 It can be used with or without an internet connection by utilizing data persistance techniques. Data is stored to an IndexedDB database. If the application is closed and then reopened, content that was previously entered will be retrieved from IndexedDB.  
 
-[Deployed Application]()
+[Deployed Application](https://code-note-editor.herokuapp.com/)
 
 ![Screenshot](./client/src/images/screenshot.png)
 
