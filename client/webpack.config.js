@@ -20,6 +20,10 @@ module.exports = () => {
         template: './index.html',
         title: 'J.A.T.E'
       }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
@@ -37,10 +41,6 @@ module.exports = () => {
             destination: path.join('assets', 'icons'),
           },
         ]
-      }),
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
       }),
     ],
     // Adds CSS loaders and babel to webpack

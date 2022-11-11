@@ -1,5 +1,6 @@
 import { openDB } from 'idb';
 
+// Creates the new 'jate' database, version 1
 const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
@@ -15,35 +16,35 @@ const initdb = async () =>
 // Accepts content and adds it to IndexedDB
 export const putDb = async (content) => {
   
-  const updateDB = await openDB('jate', 1);
+  const jateDb = await openDB('jate', 1);
 
   const transaction = jateDb.transaction('jate', 'readwrite');
 
-  const store = tx.objectStore('jate');
+  const store = transaction.objectStore('jate');
 
   const request = store.put({ id: 1, value: content });
 
   const result = await request;
-  console.log('Data saved to the database', result.value);
+  console.log('Data saved to the database', result);
 };
 
 // Gets all the content from IndexedDB
 export const getDb = async () => {
 
-  const updateDB = await openDB('jate', 1);
+  const jateDb = await openDB('jate', 1);
 
   const transaction = jateDb.transaction('jate', 'readonly');
 
-  const store = tx.objectStore('jate');
+  const store = transaction.objectStore('jate');
 
-  const request = store.get(1);
+  const request = store.getAll();
   
   const result = await request;
   
   result
-    ? console.log('Data retrieved from the database', result.value)
+    ? console.log('Data retrieved from the database:', result)
     : console.log('Data not found in the database');
-  return result?.value;
+  return result;
 };
 
 initdb();
