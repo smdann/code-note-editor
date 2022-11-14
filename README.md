@@ -7,7 +7,7 @@
 
 ## Description
 
-The Code Note Editor, also known as 'Just Another Text Editor', is a progressive web application. The user can take code notes in the text editor with or without an internet connection. This application functions in the browser and it may also be downloaded to the user's desktop.
+The Code Note Editor, also known as 'Just Another Text Editor', is a progressive web application. The user can take code notes in the text editor with or without an internet connection. This application functions in the browser and it may also be downloaded to the user's desktop. Notes get saved to IndexedDB so they are not lost after exiting and returning to the application.
 
 ## Table of Contents
 
@@ -26,13 +26,31 @@ To install locally, clone the code in this repository and run `npm install` to i
 
 ## Usage 
 
-The Code Note Editor is easy to use and convenient due to it being a progressive web application. It can be used in the browser or installed by clicking the install button on the home screen. Installing will download the application to the user's desktop and an icon will appear.
+The Code Note Editor is easy to use and convenient due to it being a progressive web application. 
 
-It can be used with or without an internet connection by utilizing data persistance techniques. Data is stored to an IndexedDB database. If the application is closed and then reopened, content that was previously entered will be retrieved from IndexedDB.  
+* It can be used in the browser or installed by clicking the install button on the home screen. 
+
+* Installing will download the application to the user's desktop and an icon will appear.
+
+It can be used with or without an internet connection by utilizing data persistance techniques. 
+
+* Data is stored to an IndexedDB database. 
+
+* If the application is closed and then reopened, content that was previously entered will be retrieved from IndexedDB.
+
+Taking notes in the Code Note Editor is convenient because it has a similar feel to VS Code.
+
+* It uses the same formatting techniques and allows for a nice visualization of the code notes.
 
 [Deployed Application](https://code-note-editor.herokuapp.com/)
 
-![Screenshot](./client/src/images/screenshot.png)
+Screenshot of the application in the browser:
+
+![Screenshot](./client/src/images/web-browser-screenshot.png)
+
+Screenshot of the downloaded desktop application:
+
+![Screenshot](./client/src/images/installed-app-screenshot.png)
 
 ## License 
 
